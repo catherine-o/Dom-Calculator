@@ -45,8 +45,11 @@ function operator(btn) {
 }
 
 function evaluate() {
-    eval(equation);
-    screen.textContent = eval(equation);
+    if (eval(equation) === Infinity) {
+        screen.textContent = "Error"
+    } else {
+        screen.textContent = eval(equation);
+    }
 }
 
 function reset() {
